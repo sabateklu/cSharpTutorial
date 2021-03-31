@@ -6,20 +6,14 @@ namespace Giraffe
     {
         static void Main(string[] args)
         {
-            string color, pluralNoun, celebrity;
+            int[] luckyNumbers = {4, 8, 15, 16, 23, 42};
+            string[] friends = new string[5];
 
-            Console.Write("Enter a color: ");
-            color = Console.ReadLine();
+            friends[0] = "Jim";
+            friends[1] = "Kelly";
 
-            Console.Write("Enter a plural noun: ");
-            pluralNoun = Console.ReadLine();
-
-            Console.Write("Enter a celebrity: ");
-            celebrity = Console.ReadLine();
-
-            Console.WriteLine("Roses are " + color);
-            Console.WriteLine(pluralNoun + " are blue");
-            Console.WriteLine("I love " + celebrity);
+            luckyNumbers[1] = 900;
+            Console.WriteLine(friends[0]);
         }
     }
 }
