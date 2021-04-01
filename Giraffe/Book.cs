@@ -7,11 +7,18 @@ namespace Giraffe
         public string author;
         public int pages;
 
-        public Book(string name, string writtenBy, int numOfPages)
+        // you can still use this method to create an instance of the class 
+        public Book()
         {
-            title = name;
-            author = writtenBy;
-            pages = numOfPages;
+
+        }
+
+        // constructor method: the constructor is a method that is called when an instance of the class is created
+        public Book(string aTitle, string aAuthor, int aPages)
+        {
+            title = aTitle;
+            author = aAuthor;
+            pages = aPages;
         }
     }
 }
