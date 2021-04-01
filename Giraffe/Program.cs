@@ -4,16 +4,19 @@ namespace Giraffe
 {
     class Program
     {
+        // only code that is run within Main, so if you want to run code you have to call it in Main
         static void Main(string[] args)
         {
-            int[] luckyNumbers = {4, 8, 15, 16, 23, 42};
-            string[] friends = new string[5];
+            SayHi("Saba", 28);
+            SayHi("Axum", 29);
+        }
 
-            friends[0] = "Jim";
-            friends[1] = "Kelly";
+        // create a new method that says hi to the user;
+        // break down of a method: static returnType methodName
 
-            luckyNumbers[1] = 900;
-            Console.WriteLine(friends[0]);
+        static void SayHi(string name, int age)
+        {
+            Console.WriteLine("Hello " + name + ", you are " + age + " years old");
         }
     }
 }
