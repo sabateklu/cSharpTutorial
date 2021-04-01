@@ -7,14 +7,20 @@ namespace Giraffe
         // only code that is run within Main, so if you want to run code you have to call it in Main
         static void Main(string[] args)
         {
-            // Classes and Objects
-            // object methods in C#: instances of an object can use these method
+            // using getters and setters
+            // controls the access to attributes of instances
+            Movies avengers = new Movies("The Avengers", "Joss Whedon", "PG-13");
+            Movies shrek = new Movies("Shrek", "Adam Adamson", "PG");
 
-            Student student1 = new Student("Jim", "Business", 2.8);
-            Student student2 = new Student("Pam", "Art", 3.6);
+            //Potential ratings: G, PG, PG-13, R, NR
+            // how do we enforce that the rating input is immutable and only one of the five ratings?
 
-            Console.WriteLine(student1.HasHonors()); // should return false;
-            Console.WriteLine(student2.HasHonors()); // should return true;
+            // 1. we need to close off access to the rating attribute using private in the variable declaration
+            // 2. we need to create getters and setters to allow outside code to access and modify the rating
+
+            avengers.Rating = "Dog";
+            Console.WriteLine(avengers.Rating);
+            
         }
         
     }
