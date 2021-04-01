@@ -8,14 +8,13 @@ namespace Giraffe
         static void Main(string[] args)
         {
             // Classes and Objects
-            // a class is a template of a data type and object is an instance of that data type
-            Book book1 = new Book("Harry Potter", "Jk Rowling", 400);
+            // object methods in C#: instances of an object can use these method
 
-            Console.WriteLine(book1.title);
+            Student student1 = new Student("Jim", "Business", 2.8);
+            Student student2 = new Student("Pam", "Art", 3.6);
 
-            book1.title = "The hobbit";
-
-            Console.WriteLine(book1.title);
+            Console.WriteLine(student1.HasHonors()); // should return false;
+            Console.WriteLine(student2.HasHonors()); // should return true;
         }
         
     }
