@@ -7,15 +7,37 @@ namespace Giraffe
         // only code that is run within Main, so if you want to run code you have to call it in Main
         static void Main(string[] args)
         {
-            int index = 6;
+            // building a guessing game where the user has to continue guessing the word until they get it correct
 
-            do // executes the code in the block before checking the condition
+            string secretWord = "giraffe";
+            string guess = "";
+            int guessLimit = 3;
+            int guessCount = 0;
+            bool outOfGuesses = false;
+            
+
+            while (guess != secretWord && !outOfGuesses)
             {
-                Console.WriteLine(index);
-                index++;
-            } while (index <= 5) ;
+                if (guessCount < guessLimit)
+                {
+                    Console.Write("Enter guess: ");
+                    guess = Console.ReadLine();
+                    guessCount++;
+                }
+                else
+                {
+                    outOfGuesses = true;
+                }
 
-
+            }
+            if (outOfGuesses)
+            {
+                Console.WriteLine("you lose!");
+            }
+            else
+            {
+                Console.WriteLine("you win!");
+            }
         }
        
     }
