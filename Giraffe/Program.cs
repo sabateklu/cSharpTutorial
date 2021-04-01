@@ -7,21 +7,37 @@ namespace Giraffe
         // only code that is run within Main, so if you want to run code you have to call it in Main
         static void Main(string[] args)
         {
-            bool isFemale = false;
-            bool isTall = true;
-
-            if (isFemale && isTall)
+            Console.WriteLine(GetMax(1000, 45, 200));
+            Console.WriteLine(GetEquality("hi", "hi"));
+        }
+        // write a method to that takes two integers and returns the max
+        static int GetMax(int num1, int num2, int num3)
+        {
+            int result;
+            // comparison operators include ==, <=, >=, >, <, !=
+            // you can also compare characters and strings
+            if (num1 >= num2 && num1 >= num3)
             {
-                Console.WriteLine("you are female and tall");
-            } else if (isFemale && !isTall)
+                result = num1;
+            } else if (num2 >= num1 && num2 >= num3)
             {
-                Console.WriteLine("you are a short female");
-            } else if (!isFemale && isTall)
-            {
-                Console.WriteLine("you are not female and you're tall");
+                result = num2;
             } else
             {
-                Console.WriteLine("you are neither a female or tall");
+                result = num3;
+            }
+
+            return result;
+        }
+
+        static bool GetEquality(string first, string second)
+        {
+            if (first == second)
+            {
+                return true;
+            } else
+            {
+                return false;
             }
         }
     }
