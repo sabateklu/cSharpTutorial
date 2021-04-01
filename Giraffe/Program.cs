@@ -7,20 +7,16 @@ namespace Giraffe
         // only code that is run within Main, so if you want to run code you have to call it in Main
         static void Main(string[] args)
         {
-            // using getters and setters
-            // controls the access to attributes of instances
-            Movies avengers = new Movies("The Avengers", "Joss Whedon", "PG-13");
-            Movies shrek = new Movies("Shrek", "Adam Adamson", "PG");
+            Song holiday = new Song("holiday", "green day", 3);
+            Song kashmir = new Song("kashmir", "led", 2);
 
-            //Potential ratings: G, PG, PG-13, R, NR
-            // how do we enforce that the rating input is immutable and only one of the five ratings?
+            // as of now, each instance has normal attributes that are unique to each object
+            // a static attribute is the same for each instance and unique to the class
 
-            // 1. we need to close off access to the rating attribute using private in the variable declaration
-            // 2. we need to create getters and setters to allow outside code to access and modify the rating
+            Console.WriteLine(Song.songCount);
 
-            avengers.Rating = "Dog";
-            Console.WriteLine(avengers.Rating);
-            
+            // you cant access the static attribute via the instance so this wont work: Console.WriteLine(kashmir.songCount);
+            Console.WriteLine(holiday.getSongCount());
         }
         
     }
