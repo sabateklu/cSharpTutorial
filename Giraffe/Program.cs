@@ -7,38 +7,32 @@ namespace Giraffe
         // only code that is run within Main, so if you want to run code you have to call it in Main
         static void Main(string[] args)
         {
-            Console.WriteLine(GetMax(1000, 45, 200));
-            Console.WriteLine(GetEquality("hi", "hi"));
-        }
-        // write a method to that takes two integers and returns the max
-        static int GetMax(int num1, int num2, int num3)
-        {
-            int result;
-            // comparison operators include ==, <=, >=, >, <, !=
-            // you can also compare characters and strings
-            if (num1 >= num2 && num1 >= num3)
+            Console.Write("Enter a number: ");
+            double num1 = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("Enter Operator: ");
+            string op = Console.ReadLine();
+
+            Console.Write("Enter a number: ");
+            double num2 = Convert.ToDouble(Console.ReadLine());
+
+            if (op == "+" )
             {
-                result = num1;
-            } else if (num2 >= num1 && num2 >= num3)
+                Console.WriteLine(num1 + num2);
+            } else if ( op == "-")
             {
-                result = num2;
+                Console.WriteLine(num1 - num2);
+            } else if (op == "/")
+            {
+                Console.WriteLine(num1 / num2);
+            } else if (op == "*")
+            {
+                Console.WriteLine(num1 * num2);
             } else
             {
-                result = num3;
-            }
-
-            return result;
-        }
-
-        static bool GetEquality(string first, string second)
-        {
-            if (first == second)
-            {
-                return true;
-            } else
-            {
-                return false;
+                Console.WriteLine("Invalid operator");
             }
         }
+       
     }
 }
